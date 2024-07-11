@@ -3,6 +3,7 @@
 
 DELIMITER $$
 
+DROP PROCEDURE IF EXISTS ComputeAverageScoreForUser;
 CREATE PROCEDURE ComputeAverageScoreForUser(
     IN user_id INT
 )
@@ -15,4 +16,5 @@ BEGIN
     SET average_score = avg_score
     WHERE id = user_id;
 END $$
+
 DELIMITER ;
