@@ -14,7 +14,7 @@ BEGIN
     WHERE corrections.user_id = user_id;
     UPDATE users
     SET users.average_score = avg_score
-    WHERE id = user_id;
+    WHERE users.id = user_id;
 END $$
 
 DELIMITER ;
