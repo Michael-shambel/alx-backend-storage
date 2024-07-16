@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-function that return 
+function that return
 the list of school having the specifc topic
 """
 
