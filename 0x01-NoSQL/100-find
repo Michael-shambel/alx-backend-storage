@@ -1,0 +1,2 @@
+// script that ;ists all ducumets with name starting by Holberton
+db.school.find({ name: /^Holberton/i })
