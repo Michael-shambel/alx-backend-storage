@@ -1,0 +1,3 @@
+// script that deletel the collections with the name value pair given
+db.school.deleteMany({"name": "Holberton school"})
+
