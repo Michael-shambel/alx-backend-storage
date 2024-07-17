@@ -7,6 +7,16 @@ and generate a random key
 import redis
 import uuid
 from typing import Union, Optional, Callable
+from functools import wraps
+
+
+def count_calls(method: callable) -> callable:
+    @wraps(method)
+    def wrapper(self, *args, **kwds):
+        key = method.__qualname__
+        self._redis.incr(key)
+        return method(*args, **kwds)
+    return wrapper
 
 
 class Cache:
