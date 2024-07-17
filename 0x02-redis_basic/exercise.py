@@ -12,7 +12,7 @@ from functools import wraps
 
 def count_calls(method: callable) -> callable:
     """
-    cout decoretor that count the 
+    cout decoretor that count the
     """
     key = method.__qualname__
 
