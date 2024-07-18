@@ -50,7 +50,7 @@ def replay(method: Callable):
     for input_data, output_data in zip(inputs, outputs):
         input_str = input_data.decode('utf-8')
         output_str = output_data.decode('utf-8')
-        print(f"{method.__qualname__}(*{input_str}) -> {output_str}")    
+        print(f"{method.__qualname__}(*{input_str}) -> {output_str}")
 
 
 class Cache:
